@@ -1,0 +1,1 @@
+No CSV found with at least source_id, time, mag columns (per DEFAULT_COL_MAP).
