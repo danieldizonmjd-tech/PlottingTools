@@ -41,9 +41,9 @@ def compute_correlation_matrix(df, columns=None, standardize=True):
 - Ensured center alignment for consistent positioning
 
 #### Result
-✅ Correlation matrix now shows **accurate, scale-adjusted** relationships  
-✅ Labels are **horizontally aligned** where possible  
-✅ Chord widths now represent **true correlation magnitude** |r|
+ Correlation matrix now shows **accurate, scale-adjusted** relationships  
+ Labels are **horizontally aligned** where possible  
+ Chord widths now represent **true correlation magnitude** |r|
 
 ---
 
@@ -76,15 +76,15 @@ def normalize_for_chord(matrix, preserve_magnitude=True):
 ```
 
 #### Result
-✅ Variability arcs now **properly visible** and proportional  
-✅ All three categories (Low/Medium/High) clearly displayed  
-✅ **NV class dominance** correctly reflected (73.6% of all sources)
+ Variability arcs now **properly visible** and proportional  
+ All three categories (Low/Medium/High) clearly displayed  
+ **NV class dominance** correctly reflected (73.6% of all sources)
 
 ---
 
 ### **Graph 3: YSO Class vs Light Curve Type**
 
-#### Status: ✅ Fixed & Verified
+#### Status: Fixed & Verified
 
 **Data Summary**:
 - 5 YSO classes × 7 light curve types = 35 possible combinations
@@ -102,7 +102,7 @@ def normalize_for_chord(matrix, preserve_magnitude=True):
 
 ### **Graph 4: YSO Class vs Variability**
 
-#### Status: ✅ Fixed & Verified
+#### Status:  Fixed & Verified
 
 **Data Summary**:
 - 5 YSO classes × 3 variability categories = 15 combinations
@@ -264,10 +264,10 @@ All identified issues have been resolved:
 
 | Issue | Status | Solution |
 |-------|--------|----------|
-| Scale-dominated correlations | ✅ Fixed | Z-score standardization |
-| Missing sign information | ✅ Known | Use absolute values for magnitude |
-| Poor label readability | ✅ Fixed | Enhanced positioning & font |
-| Collapsed variability categories | ✅ Fixed | Improved normalization logic |
-| General visualization quality | ✅ Enhanced | Better labeling, higher DPI |
+| Scale-dominated correlations | Fixed | Z-score standardization |
+| Missing sign information |  Known | Use absolute values for magnitude |
+| Poor label readability | Fixed | Enhanced positioning & font |
+| Collapsed variability categories |  Fixed | Improved normalization logic |
+| General visualization quality | Enhanced | Better labeling, higher DPI |
 
 The visualizations are now **accurate, readable, and publication-ready**.
