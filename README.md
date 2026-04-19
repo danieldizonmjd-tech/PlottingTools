@@ -29,6 +29,9 @@ Core outputs:
 Archived material:
 - Older scripts, one-off analyses, and legacy plots are moved into `archive/` and `plotting_tool_graphs/archive/`
 
+Candidate follow-up targets:
+- `candidates/README.md`
+
 ## What to run (the basic path)
 
 1. Run the core analysis
