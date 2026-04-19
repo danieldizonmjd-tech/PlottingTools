@@ -13,7 +13,7 @@ def verify_data_integrity():
     print("1. DATA INTEGRITY VERIFICATION")
     print("="*70)
     
-    df = parse_mrt_file('paper_data_files/apjsadc397t2_mrt.txt')
+    df = parse_mrt_file('paper_data_files/illuminating_youth_mid_ir_variability_color_evolution_mrt.txt')
     df['Variability'] = categorize_variability(df, 'delW2mag')
     
     # Check counts

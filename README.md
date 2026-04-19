@@ -20,7 +20,7 @@ If you only look at three things to get oriented, start here:
 ## Broad overview
 
 Input:
-- `paper_data_files/apjsadc397t2_mrt.txt` (Paper B table)
+- `paper_data_files/illuminating_youth_mid_ir_variability_color_evolution_mrt.txt`
 
 Core outputs:
 - Saved into `plotting_tool_graphs/`

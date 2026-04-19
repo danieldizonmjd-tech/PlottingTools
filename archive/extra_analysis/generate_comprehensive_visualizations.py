@@ -410,7 +410,7 @@ def create_zoomed_chord_rare_categories(contingency_table, title, filename):
 
 def main():
     print("Loading YSO data...")
-    paper_b_file = str(DATA_DIR / 'apjsadc397t2_mrt.txt')
+    paper_b_file = str(DATA_DIR / 'illuminating_youth_mid_ir_variability_color_evolution_mrt.txt')
     df_b = parse_mrt_file(paper_b_file)
     print(f"Loaded {len(df_b)} sources (raw)\n")
 

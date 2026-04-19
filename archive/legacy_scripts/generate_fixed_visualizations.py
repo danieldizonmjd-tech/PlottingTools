@@ -92,7 +92,7 @@ def validate_data(df):
 
 def main():
     print("Loading YSO data...")
-    paper_b_file = '/Users/marcus/Desktop/YSO/paper_data_files/apjsadc397t2_mrt.txt'
+    paper_b_file = '/Users/marcus/Desktop/YSO/paper_data_files/illuminating_youth_mid_ir_variability_color_evolution_mrt.txt'
     df_b = parse_mrt_file(paper_b_file)
     
     print(f"Loaded {len(df_b)} sources")

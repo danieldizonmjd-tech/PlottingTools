@@ -16,7 +16,7 @@ This document details all generated visualizations, their data accuracy, and int
 
 ## Data Validation Summary
 
-**Dataset**: 20,654 YSO sources from Paper B (apjsadc397t2_mrt.txt)
+**Dataset**: 20,654 YSO sources from Illuminating Youth (illuminating_youth_mid_ir_variability_color_evolution_mrt.txt)
 
 ### Contingency Tables (All Sum to 20,654)
 

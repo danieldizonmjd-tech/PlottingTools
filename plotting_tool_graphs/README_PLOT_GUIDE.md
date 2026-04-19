@@ -6,7 +6,7 @@ It is written for this workspace:
 
 ## Data context used by these plots
 
-- Main data file: `paper_data_files/apjsadc397t2_mrt.txt`
+- Main data file: `paper_data_files/illuminating_youth_mid_ir_variability_color_evolution_mrt.txt`
 - Project reports state a full sample of 20,654 YSOs with strong class imbalance:
   - ClassII is the majority class
   - NV is the majority LC type

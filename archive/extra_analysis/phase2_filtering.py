@@ -3,7 +3,7 @@ import numpy as np
 from pathlib import Path
 
 def parse_paper_a(filepath):
-    """Parse Paper A (apjadd25ft1_mrt.txt) - SPICY linear YSOs"""
+    """Parse Oh FUors where art thou (oh_fuors_where_art_thou_long_lasting_yso_outbursts_mrt.txt) - SPICY linear YSOs"""
     data = []
     with open(filepath, 'r') as f:
         lines = f.readlines()
@@ -51,7 +51,7 @@ def parse_paper_a(filepath):
     return pd.DataFrame(data)
 
 def parse_paper_b(filepath):
-    """Parse Paper B (apjsadc397t2_mrt.txt)"""
+    """Parse Illuminating Youth (illuminating_youth_mid_ir_variability_color_evolution_mrt.txt)"""
     data = []
     with open(filepath, 'r') as f:
         lines = f.readlines()
@@ -86,7 +86,7 @@ def parse_paper_b(filepath):
     return pd.DataFrame(data)
 
 def parse_paper_c(filepath):
-    """Parse Paper C (apjsadf4e6t4_mrt.txt) - LAMOST YSO candidates"""
+    """Parse LAMOST Halpha catalog (lamost_halpha_emission_stars_yso_candidates_deep_learning_mrt.txt)"""
     data = []
     with open(filepath, 'r') as f:
         lines = f.readlines()
@@ -124,12 +124,12 @@ def main():
     print("=" * 80)
     
     file_mapping = {
-        'A': '/Users/marcus/Desktop/YSO/apjadd25ft1_mrt.txt',
-        'B': '/Users/marcus/Desktop/YSO/apjsadc397t2_mrt.txt',
-        'C': '/Users/marcus/Desktop/YSO/apjsadf4e6t4_mrt.txt'
+        'A': '/Users/marcus/Desktop/YSO/oh_fuors_where_art_thou_long_lasting_yso_outbursts_mrt.txt',
+        'B': '/Users/marcus/Desktop/YSO/illuminating_youth_mid_ir_variability_color_evolution_mrt.txt',
+        'C': '/Users/marcus/Desktop/YSO/lamost_halpha_emission_stars_yso_candidates_deep_learning_mrt.txt',
     }
     
-    print("\n[PAPER A] Loading apjadd25ft1_mrt.txt...")
+    print("\n[PAPER A] Loading oh_fuors_where_art_thou_long_lasting_yso_outbursts_mrt.txt...")
     df_a = parse_paper_a(file_mapping['A'])
     print(f"  Raw records: {len(df_a)}")
     
@@ -142,16 +142,16 @@ def main():
     print(f"  Linear(+) sources: {len(df_a_linear_plus)}")
     print(f"  Linear(-) sources: {len(df_a_linear_minus)}")
     
-    output_a_plus = str(output_dir / 'PaperA_LinearPlus.csv')
-    output_a_minus = str(output_dir / 'PaperA_LinearMinus.csv')
+    output_a_plus = str(output_dir / 'oh_fuors_spicy_linear_plus.csv')
+    output_a_minus = str(output_dir / 'oh_fuors_spicy_linear_minus.csv')
     
     df_a_linear_plus.to_csv(output_a_plus, index=False)
     df_a_linear_minus.to_csv(output_a_minus, index=False)
     
-    print(f"  ✓ Saved: PaperA_LinearPlus.csv ({len(df_a_linear_plus)} sources)")
-    print(f"  ✓ Saved: PaperA_LinearMinus.csv ({len(df_a_linear_minus)} sources)")
+    print(f"  ✓ Saved: oh_fuors_spicy_linear_plus.csv ({len(df_a_linear_plus)} sources)")
+    print(f"  ✓ Saved: oh_fuors_spicy_linear_minus.csv ({len(df_a_linear_minus)} sources)")
     
-    print("\n[PAPER B] Loading apjsadc397t2_mrt.txt...")
+    print("\n[PAPER B] Loading illuminating_youth_mid_ir_variability_color_evolution_mrt.txt...")
     df_b = parse_paper_b(file_mapping['B'])
     print(f"  Raw records: {len(df_b)}")
     
@@ -161,34 +161,34 @@ def main():
     df_b_linear = df_b_filtered[df_b_filtered['LCType'] == 'Linear'].copy()
     print(f"  Linear sources: {len(df_b_linear)}")
     
-    output_b_linear = str(output_dir / 'PaperB_Linear.csv')
+    output_b_linear = str(output_dir / 'illuminating_youth_linear.csv')
     df_b_linear.to_csv(output_b_linear, index=False)
-    print(f"  ✓ Saved: PaperB_Linear.csv ({len(df_b_linear)} sources)")
+    print(f"  ✓ Saved: illuminating_youth_linear.csv ({len(df_b_linear)} sources)")
     
-    print("\n[PAPER C] Loading apjsadf4e6t4_mrt.txt...")
+    print("\n[PAPER C] Loading lamost_halpha_emission_stars_yso_candidates_deep_learning_mrt.txt...")
     df_c = parse_paper_c(file_mapping['C'])
     print(f"  Raw records: {len(df_c)}")
     
-    output_c_all = str(output_dir / 'PaperC_AllSources.csv')
+    output_c_all = str(output_dir / 'lamost_yso_candidates_all_sources.csv')
     df_c.to_csv(output_c_all, index=False)
-    print(f"  ✓ Saved: PaperC_AllSources.csv ({len(df_c)} sources)")
+    print(f"  ✓ Saved: lamost_yso_candidates_all_sources.csv ({len(df_c)} sources)")
     
     print("\n" + "=" * 80)
     print("SUMMARY")
     print("=" * 80)
     print(f"Output directory: {output_dir}")
     print("\nCSVs generated:")
-    print(f"  • PaperA_LinearPlus.csv: {len(df_a_linear_plus)} sources")
-    print(f"  • PaperA_LinearMinus.csv: {len(df_a_linear_minus)} sources")
-    print(f"  • PaperB_Linear.csv: {len(df_b_linear)} sources")
-    print(f"  • PaperC_AllSources.csv: {len(df_c)} sources")
+    print(f"  • oh_fuors_spicy_linear_plus.csv: {len(df_a_linear_plus)} sources")
+    print(f"  • oh_fuors_spicy_linear_minus.csv: {len(df_a_linear_minus)} sources")
+    print(f"  • illuminating_youth_linear.csv: {len(df_b_linear)} sources")
+    print(f"  • lamost_yso_candidates_all_sources.csv: {len(df_c)} sources")
     print(f"\nTotal sources for ZTF analysis: {len(df_a_linear_plus) + len(df_a_linear_minus) + len(df_b_linear) + len(df_c)}")
     
     return {
-        'PaperA_LinearPlus': df_a_linear_plus,
-        'PaperA_LinearMinus': df_a_linear_minus,
-        'PaperB_Linear': df_b_linear,
-        'PaperC_AllSources': df_c
+        'oh_fuors_spicy_linear_plus': df_a_linear_plus,
+        'oh_fuors_spicy_linear_minus': df_a_linear_minus,
+        'illuminating_youth_linear': df_b_linear,
+        'lamost_yso_candidates_all_sources': df_c
     }
 
 if __name__ == '__main__':

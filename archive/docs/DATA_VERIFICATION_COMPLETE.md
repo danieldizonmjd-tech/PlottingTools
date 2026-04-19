@@ -13,7 +13,7 @@
 ## Data Integrity Verification Results
 
 ### 1. Data Loading ✅
-- **Total Sources**: 20,654 (Paper B)
+- **Total Sources**: 20,654 (Illuminating Youth mid-infrared variability catalog)
 - **Columns**: 18 (all present)
 - **Missing Values**: 0 (complete dataset)
 - **Data Quality**: EXCELLENT

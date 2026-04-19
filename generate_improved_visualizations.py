@@ -30,14 +30,14 @@ from yso_utils import (
 
 # QC parameters (defaults). Adjust as needed or wire to argparse if desired.
 MIN_POINTS = 10
-MAX_MAG_ERR = 0.2  # if an error proxy exists; Paper B lacks per-point errors, so we use Number>=MIN_POINTS
-ALLOWED_FLAGS = None  # placeholder: Paper B tables don't expose per-point flags
-MAX_ASTRO_SEP = 2.0   # placeholder: not available in Paper B tables
+MAX_MAG_ERR = 0.2  # if an error proxy exists; this summary table lacks per-point errors, so we use Number>=MIN_POINTS
+ALLOWED_FLAGS = None  # placeholder: this table does not expose per-point flags
+MAX_ASTRO_SEP = 2.0   # placeholder: not available in this table
 
 
 def apply_qc_paper_b(df: pd.DataFrame, min_points: int = MIN_POINTS) -> pd.DataFrame:
     """
-    Apply minimal QC to Paper B-style summary table:
+    Apply minimal QC to the summary table:
     - Require at least `min_points` measurements (uses 'Number' column)
     - Drop rows with NaNs in key numeric fields used downstream
     """
@@ -153,11 +153,11 @@ def classify_irregular_subtype(row, slope_thresh=0.1, p_thresh=0.05):
 
 def main():
     print("Loading YSO data...")
-    paper_b_file = str(DATA_DIR / 'apjsadc397t2_mrt.txt')
+    paper_b_file = str(DATA_DIR / 'illuminating_youth_mid_ir_variability_color_evolution_mrt.txt')
     df_b = parse_mrt_file(paper_b_file)
     print(f"Loaded {len(df_b)} sources (raw)\n")
 
-    # Apply QC for Paper B summary table
+    # Apply QC for the summary table
     df_b = apply_qc_paper_b(df_b, min_points=MIN_POINTS)
     print(f"Kept {len(df_b)} sources after QC (Number >= {MIN_POINTS} and finite metrics)\n")
 

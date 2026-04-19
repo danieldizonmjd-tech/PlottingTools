@@ -57,7 +57,11 @@ def main():
     parser.add_argument(
         "--input",
         type=str,
-        default=str(Path(__file__).resolve().parent / "paper_data_files" / "apjsadc397t2_mrt.txt"),
+        default=str(
+            Path(__file__).resolve().parent
+            / "paper_data_files"
+            / "illuminating_youth_mid_ir_variability_color_evolution_mrt.txt"
+        ),
         help="Input MRT file path.",
     )
     parser.add_argument(
