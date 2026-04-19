@@ -7,6 +7,16 @@ This repo takes a published YSO catalog table and generates a small, reliable se
 
 The goal is quality over quantity: one clear analysis path, a small evidence set, and documentation that tells you what to believe.
 
+Repo URL:
+- https://github.com/danieldizonmjd-tech/PlottingTools
+
+## Direct pointer
+
+If you only look at three things to get oriented, start here:
+- Run: `python3 run_analysis.py`
+- Read: `plotting_tool_graphs/README_PLOT_GUIDE.md`
+- Use the core plots listed in `plotting_tool_graphs/README_PLOT_GUIDE.md`
+
 ## Broad overview
 
 Input:
@@ -35,6 +45,21 @@ Outputs to look at first in `plotting_tool_graphs/`:
 This also generates the noise and selection checks:
 - `scatter_dispersion_vs_median_mag.png`
 - `scatter_dispersion_over_error_vs_median_mag.png`
+
+## Big picture
+
+This pipeline does three things, in a deliberate order:
+
+1. Categorical relationships (the main story)
+- Build contingency tables for `LCType`, `YSO_CLASS`, and variability bins from `delW2mag`
+- Use row-normalized heatmaps for fair comparisons under class imbalance
+- Use Pearson residual heatmaps to show which specific cells drive the pattern
+
+2. Numeric metric sanity checks (to avoid self-deception)
+- Correlation heatmap across numeric metrics to detect redundancy or coupling
+
+3. Noise and selection checks (so results are believable)
+- Dispersion versus magnitude plots to see where measurement noise can bias variability diagnostics
 
 ## What to believe (and what not to over-trust)
 
@@ -79,6 +104,11 @@ Use this flow when writing conclusions:
 3. Use Pearson residual maps to cite the specific enriched or depleted category pairs.
 4. Use dispersion plots to show you accounted for noise and magnitude dependence.
 
+If you are deciding what to do next scientifically:
+- Treat LCType as the primary lens for variability amplitude.
+- Use YSO class as evolutionary context, but expect weaker predictive power than morphology.
+- Use the color-slope plot for physical interpretation within irregular sources.
+
 ## Where the detailed documentation is
 
 - Plot-by-plot meanings and code locations: `plotting_tool_graphs/README_PLOT_GUIDE.md`
@@ -89,3 +119,9 @@ Use this flow when writing conclusions:
 
 This repo intentionally keeps a small core in the root folder.
 Older scripts, one-off analysis, and legacy plots are moved into `archive/` and `plotting_tool_graphs/archive/` to keep the main path easy to follow.
+
+## How to stay updated
+
+If you want GitHub notifications, use the repository Watch setting:
+- On GitHub, click Watch and select All Activity or Custom
+- Star does not send update notifications by itself
