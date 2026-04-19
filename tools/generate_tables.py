@@ -62,59 +62,59 @@ META = {
         'sig_W2Flux/err_W2Flux vs W2magMed', 'Noise-normalized variability significance'
     ),
     'heatmap_yso_var_row_norm.png': (
-        'generate_comprehensive_visualizations.py', '494-500',
+        'archive/extra_analysis/generate_comprehensive_visualizations.py', '494-500',
         'Alias of YSO vs variability row percent', 'Duplicate naming family'
     ),
     'heatmap_lc_var_row_norm.png': (
-        'generate_comprehensive_visualizations.py', '501-507',
+        'archive/extra_analysis/generate_comprehensive_visualizations.py', '501-507',
         'Alias of LCType vs variability row percent', 'Duplicate naming family'
     ),
     'heatmap_yso_lc_row_norm.png': (
-        'generate_comprehensive_visualizations.py', '508-514',
+        'archive/extra_analysis/generate_comprehensive_visualizations.py', '508-514',
         'YSO class vs LCType row percent', 'Composition view of class-type links'
     ),
     'pearson_residuals_yso_var.png': (
-        'generate_comprehensive_visualizations.py', '517-523',
+        'archive/extra_analysis/generate_comprehensive_visualizations.py', '517-523',
         'Alias residuals YSO class x variability', 'Duplicate naming family'
     ),
     'pearson_residuals_lc_var.png': (
-        'generate_comprehensive_visualizations.py', '524-530',
+        'archive/extra_analysis/generate_comprehensive_visualizations.py', '524-530',
         'Alias residuals LCType x variability', 'Duplicate naming family'
     ),
     'pearson_residuals_yso_lc.png': (
-        'generate_comprehensive_visualizations.py', '531-537',
+        'archive/extra_analysis/generate_comprehensive_visualizations.py', '531-537',
         'Alias residuals YSO class x LCType', 'Duplicate naming family'
     ),
     'statistical_summary.png': (
-        'generate_comprehensive_visualizations.py', '538-566',
+        'archive/extra_analysis/generate_comprehensive_visualizations.py', '538-566',
         '4-panel statistical summary', 'Compact chi2, effect size, imbalance report'
     ),
     'chord_correlation_metrics.png': (
-        'generate_fixed_visualizations.py / YSO_Chord_Project.ipynb', '177-194 / 271',
+        'archive/legacy_scripts/generate_fixed_visualizations.py / archive/legacy_scripts/YSO_Chord_Project.ipynb', '177-194 / 271',
         'Legacy chord-style metric relationship view', 'Historical presentation figure'
     ),
     'chord_yso_class_vs_lightcurve.png': (
-        'YSO_Chord_Project.ipynb', '360',
+        'archive/legacy_scripts/YSO_Chord_Project.ipynb', '360',
         'Legacy chord class vs LCType', 'Historical presentation figure'
     ),
     'chord_yso_class_vs_variability.png': (
-        'YSO_Chord_Project.ipynb', '411',
+        'archive/legacy_scripts/YSO_Chord_Project.ipynb', '411',
         'Legacy chord class vs variability', 'Historical presentation figure'
     ),
     'chord_lightcurve_vs_variability.png': (
-        'YSO_Chord_Project.ipynb', '462',
+        'archive/legacy_scripts/YSO_Chord_Project.ipynb', '462',
         'Legacy chord LCType vs variability', 'Historical presentation figure'
     ),
     'correlation_heatmap_yso_vs_lc.png': (
-        'generate_fixed_visualizations.py', '262-282',
+        'archive/legacy_scripts/generate_fixed_visualizations.py', '262-282',
         'Legacy contingency-correlation heatmap', 'Distribution similarity, not primary effect size'
     ),
     'correlation_heatmap_yso_vs_variability.png': (
-        'generate_fixed_visualizations.py', '286-306',
+        'archive/legacy_scripts/generate_fixed_visualizations.py', '286-306',
         'Legacy contingency-correlation heatmap', 'Distribution similarity, not primary effect size'
     ),
     'correlation_heatmap_lc_vs_variability.png': (
-        'generate_fixed_visualizations.py', '310-330',
+        'archive/legacy_scripts/generate_fixed_visualizations.py', '310-330',
         'Legacy contingency-correlation heatmap', 'Distribution similarity, not primary effect size'
     ),
     'cramers_v_yso_variability.png': (
