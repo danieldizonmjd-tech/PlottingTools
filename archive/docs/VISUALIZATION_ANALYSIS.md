@@ -6,11 +6,11 @@ This document details all generated visualizations, their data accuracy, and int
 2. **Correlation Heatmaps** - Show relationships between variables with proper statistical rigor
 
 ## Version 2.0 Improvements (This Version)
-✅ Added Cramér's V effect size (proper metric for categorical data)  
-✅ Added Chi-squared significance tests for all relationships  
-✅ Identified and documented severe class imbalance (ClassII=61.8%, uncertain=0.38%)  
-✅ Explained limitations of Pearson correlation on categorical contingency tables  
-✅ Added interpretation guidelines for effect sizes  
+ Added Cramér's V effect size (proper metric for categorical data)  
+ Added Chi-squared significance tests for all relationships  
+ Identified and documented severe class imbalance (ClassII=61.8%, uncertain=0.38%)  
+ Explained limitations of Pearson correlation on categorical contingency tables  
+ Added interpretation guidelines for effect sizes  
 
 ---
 
@@ -55,7 +55,7 @@ This document details all generated visualizations, their data accuracy, and int
 - **Ribbon width** = Number of sources in that category pair
 - **Ribbon color** = Matches the source variable color
 
-**Data accuracy**: ✅ CORRECT
+**Data accuracy**:  CORRECT
 - Widths proportional to contingency table values
 - NV segment is largest (15,210 sources = 73.6%)
 - Irregular segment is second largest (4,103 sources = 19.9%)
@@ -86,7 +86,7 @@ This document details all generated visualizations, their data accuracy, and int
 - **Ribbon width** = Number of sources in that class-type pair
 - Segments positioned to show dominant flows
 
-**Data accuracy**: ✅ CORRECT
+**Data accuracy**: CORRECT
 - All values match contingency table
 - ClassII dominates with 12,757 sources (61.8%)
 - NV dominates light curves with 15,210 sources (73.6%)
@@ -113,7 +113,7 @@ This document details all generated visualizations, their data accuracy, and int
 - **Ribbon width** = Number of sources
 - Color encoding shows class membership
 
-**Data accuracy**: ✅ CORRECT (with rendering note below)
+**Data accuracy**: CORRECT (with rendering note below)
 - All widths match contingency table exactly
 - ClassII dominates with 12,757 sources
 - Medium variability most common across all classes (10,941 total = 53.0%)
@@ -155,7 +155,7 @@ Correlation heatmaps show **Pearson correlation coefficients** computed from con
 
 ## Statistical Quality Issues & Resolutions
 
-### Issue 1: Pearson Correlation on Categorical Data ❌→✅
+### Issue 1: Pearson Correlation on Categorical Data
 
 **Problem**: Original analysis used Pearson correlation on contingency tables
 - Pearson assumes continuous, normally-distributed variables
@@ -181,16 +181,16 @@ YSO Class ↔ Light Curve:       V = 0.0858 (negligible)
 
 ---
 
-### Issue 2: Missing Statistical Significance Tests ❌→✅
+### Issue 2: Missing Statistical Significance Tests
 
 **Solution**: Added Chi-squared (χ²) independence tests for all contingency tables
 
 **Results**:
 | Relationship | χ² | p-value | DOF | Significant? |
 |---|---|---|---|---|
-| YSO Class ↔ Variability | 530.05 | 2.5×10⁻¹⁰⁹ | 8 | ✅ YES |
-| Light Curve ↔ Variability | 6144.28 | ~0 | 12 | ✅ YES |
-| YSO Class ↔ LC Type | 608.47 | 4.0×10⁻¹¹³ | 24 | ✅ YES |
+| YSO Class ↔ Variability | 530.05 | 2.5×10⁻¹⁰⁹ | 8 |  YES |
+| Light Curve ↔ Variability | 6144.28 | ~0 | 12 |  YES |
+| YSO Class ↔ LC Type | 608.47 | 4.0×10⁻¹¹³ | 24 |  YES |
 
 **Interpretation**: All relationships are **statistically significant** (p << 0.001), meaning they are NOT due to random chance. However, statistical significance ≠ practical significance (effect sizes are weak-to-moderate).
 
@@ -343,14 +343,14 @@ The heatmaps showing Pearson correlation on contingency tables (YSO vs Variabili
 
 | Visualization | Type | Accuracy | Statistical Notes | Key Finding |
 |---|---|---|---|---|
-| **LC Type vs Variability** | Cachai Chord | ✅ Verified | χ²=6144.28, p<0.001 (sig.) | NV=Low/Medium dominated; Irregular=High dominated |
-| **YSO Class vs LC Type** | Cachai Chord | ✅ Verified | χ²=608.47, p<0.001 (sig.) | ClassII/NV dominates; V=0.086 (negligible) |
-| **YSO Class vs Variability** | Cachai Chord | ✅ Verified* | χ²=530.05, p<0.001 (sig.) | ClassI/ClassIII similar; V=0.113 (weak) |
-| **Variability Metrics** | Heatmap | ✅ Verified | r-values shown; weak correlations | Flux scatter correlated (r=0.44); others weak |
+| **LC Type vs Variability** | Cachai Chord |  Verified | χ²=6144.28, p<0.001 (sig.) | NV=Low/Medium dominated; Irregular=High dominated |
+| **YSO Class vs LC Type** | Cachai Chord |  Verified | χ²=608.47, p<0.001 (sig.) | ClassII/NV dominates; V=0.086 (negligible) |
+| **YSO Class vs Variability** | Cachai Chord | Verified* | χ²=530.05, p<0.001 (sig.) | ClassI/ClassIII similar; V=0.113 (weak) |
+| **Variability Metrics** | Heatmap |  Verified | r-values shown; weak correlations | Flux scatter correlated (r=0.44); others weak |
 | **YSO Class ↔ LC Type** | Heatmap | ⚠️ Use caution | Pearson on contingency (distribution similarity) | High r but V=0.086 (negligible true association) |
 | **YSO Class ↔ Variability** | Heatmap | ⚠️ Use caution | Pearson on contingency (distribution similarity) | High r but V=0.113 (weak true association) |
 | **LC Type ↔ Variability** | Heatmap | ⚠️ Use caution | Pearson on contingency (distribution similarity) | High r but V=0.386 (moderate true association) |
-| **Cramér's V (YSO)** | Heatmap | ✅ Verified | Proper effect size metric | ClassI/III: V~0.95; Class imbalance noted |
+| **Cramér's V (YSO)** | Heatmap |  Verified | Proper effect size metric | ClassI/III: V~0.95; Class imbalance noted |
 
 **Notes:**
 - *uncertain class (n=79) ribbon extends beyond circle due to <0.5% sample size (data is correct)
@@ -385,11 +385,11 @@ The heatmaps showing Pearson correlation on contingency tables (YSO vs Variabili
 
 ## Data Quality Notes
 
-- ✅ All contingency tables sum to 20,654
-- ✅ All correlations manually validated (ClassI vs ClassII: r=0.9084 verified)
-- ✅ No missing values in critical columns
-- ✅ Variability categorization: Low <0.2 mag, Medium 0.2-0.5, High >0.5
-- ✅ All sources classified in exactly one category per variable
+-  All contingency tables sum to 20,654
+-  All correlations manually validated (ClassI vs ClassII: r=0.9084 verified)
+-  No missing values in critical columns
+-  Variability categorization: Low <0.2 mag, Medium 0.2-0.5, High >0.5
+-  All sources classified in exactly one category per variable
 
 ---
 
